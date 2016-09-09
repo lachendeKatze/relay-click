@@ -3,7 +3,7 @@
 
   class RelayClick {
 
-  let deviceName = 'relays';
+  var deviceName = 'relays';
   let serviceUUID = '917649A0-D98E-11E5-9EEC-0002A5D5C51B';
   let characteristic1UUID = '917649A1-D98E-11E5-9EEC-0002A5D5C51B';
 
