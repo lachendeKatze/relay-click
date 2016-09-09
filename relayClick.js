@@ -20,8 +20,8 @@
             return Promise.all([
               server.getPrimaryService('uuidServiceHere').then(service=>{
                 return Promise.all([
-                  this._cacheCharacteristic(service, 'uuidCharacteristicHere'),
-                  this._cacheCharacteristic(service, 'uuidCharacteristicHere'),
+                  this._cacheCharacteristic(service, 'uuidCharacteristic1Here'),
+                  this._cacheCharacteristic(service, 'uuidCharacteristic2Here'),
                 ])
               })
             ]);
@@ -48,8 +48,8 @@
    let characteristic = this._characteristics.get(characteristicUuid);
    return characteristic.writeValue(value);
  }
-
- window.relayClick = new RelayClick();
+}
+window.relayClick = new RelayClick();
 
 
 })();
