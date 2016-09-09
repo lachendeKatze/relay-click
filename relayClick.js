@@ -3,6 +3,10 @@
 
   class RelayClick {
 
+  let deviceName = 'relays';
+  let serviceUUID = '917649A0-D98E-11E5-9EEC-0002A5D5C51B';
+  let characteristic1UUID = '917649A1-D98E-11E5-9EEC-0002A5D5C51B';
+
     constructor() {
         this.device = null;
         this.server = null;
@@ -10,7 +14,7 @@
     }
 
     connect(){
-        return navigator.bluetooth.requestDevice({filters:[{services:['uuidDeviceNameHere']}]})
+        return navigator.bluetooth.requestDevice({filters:[{services:[deviceName]}]})
         .then(device => {
             this.device = device;
             return device.gatt.connect();
@@ -18,10 +22,10 @@
         .then(server => {
             this.server = server;
             return Promise.all([
-              server.getPrimaryService('uuidServiceHere').then(service=>{
+              server.getPrimaryService(serviceUUID).then(service=>{
                 return Promise.all([
-                  this._cacheCharacteristic(service, 'uuidCharacteristic1Here'),
-                  this._cacheCharacteristic(service, 'uuidCharacteristic2Here'),
+                  this._cacheCharacteristic(service, characteristic1UUID),
+                  // this._cacheCharacteristic(service, 'uuidCharacteristic2Here'),
                 ])
               })
             ]);
