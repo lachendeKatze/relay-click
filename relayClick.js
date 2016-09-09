@@ -19,7 +19,7 @@
     connect(){
         return navigator.bluetooth.requestDevice({
          filters: [{ 
-          services:[this.deviceName]
+          services:[this.serviceUUID]
          }]
         })
         .then(device => {
