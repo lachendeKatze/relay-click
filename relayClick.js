@@ -17,7 +17,7 @@
     }
 
     connect(){
-        return navigator.bluetooth.requestDevice({filters:[{services:[this.deviceName]}]})
+        return navigator.bluetooth.requestDevice({filters:[{services:['relays']}]})
         .then(device => {
             this.device = device;
             return device.gatt.connect();
