@@ -8,8 +8,8 @@
     constructor() {
      
         this.deviceName = 'relays';
-        this.serviceUUID = '917649A0-D98E-11E5-9EEC-0002A5D5C51B';
-        this.characteristic1UUID = '917649A1-D98E-11E5-9EEC-0002A5D5C51B';
+        this.serviceUUID = '917649a0-d98e-11e5-9eec-0002a5d5c51b';
+        this.characteristic1UUID = '917649a1-d98e-11e5-9eec-0002a5d5c51b';
      
         this.device = null;
         this.server = null;
