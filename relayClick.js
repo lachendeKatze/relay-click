@@ -1,24 +1,20 @@
- (function() {
+(function() {
   'use strict';
 
   class RelayClick {
 
-   
-
     constructor() {
-     
         this.deviceName = 'relays';
         this.serviceUUID = '917649a0-d98e-11e5-9eec-0002a5d5c51b';
         this.characteristic1UUID = '917649a1-d98e-11e5-9eec-0002a5d5c51b';
-     
         this.device = null;
         this.server = null;
-        this._characterisitc = new Map();
+        this._characteristics = new Map();
     }
 
     connect(){
         return navigator.bluetooth.requestDevice({
-         filters: [{ 
+         filters: [{
           services:[this.serviceUUID]
          }]
         })
@@ -43,7 +39,7 @@
   _cacheCharacteristic(service, characteristicUuid){
     return service.getCharacteristic(characteristicUuid)
     .then(characteristic => {
-      this._characteristic.set(characteristicUuid, characteristic);
+      this._characteristics.set(characteristicUuid, characteristic);
     });
   }
 
@@ -61,7 +57,7 @@
    return characteristic.writeValue(value);
  }
 }
-window.relayClick = new RelayClick();
 
+window.relayClick = new RelayClick();
 
 })();

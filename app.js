@@ -10,14 +10,14 @@ bleConnectButton.addEventListener('click', function(){
 });
 
 relayOneButton.addEventListener('click', function(){
-  relayClick._writeCharacteristic('uuidCharacteristicHere', new Uint8Array([1]))
+  relayClick._writeCharacteristic(relayClick.characteristic1UUID, new Uint8Array([1]))
   .then(() => console.log('wrote 1'))
   .catch(error => {console.log('write error');
   });
 });
 
 relayTwoButton.addEventListener('click', function(){
-  relayClick._writeCharacteristic('uuidCharacteristicHere', new Uint8Array([2]))
+  relayClick._writeCharacteristic(relayClick.characteristic1UUID, new Uint8Array([2]))
   .then(() => console.log('wrote 2'))
   .catch(error => {console.log('write error');
   });
