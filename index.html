@@ -1,136 +1,18 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<!--
-This is an app that demonstrates how to control an Arduino101 board
-using BLE (Bluetooth Low Energy).
--->
-<head>
-
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, user-scalable=no
-		initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
-
-	<title>Arduino101 click-relay-BLE</title>
-
-	<style>
-		@import 'ui/css/evothings-app.css';
-	</style>
-
-	<script>
-	// Redirect console.log to Evothings Workbench.
-	if (window.hyper && window.hyper.log) { console.log = hyper.log }
-	window.onerror = function(msg, url, line)
-	{
-		console.log(msg + ": " + url + ":" + line);
-	};
-	</script>
-
-	<script src="cordova.js"></script>
-	<script src="libs/jquery/jquery.js"></script>
-	<script src="libs/evothings/evothings.js"></script>
-	<script src="libs/evothings/ui/ui.js"></script>
-	<script src="libs/evothings/arduinoble/arduinoble.js"></script>
-
-</head>
-
-<body ontouchstart=""><!-- ontouchstart="" enables low-delay CSS transitions. -->
-
-	<header>
-		<button class="back" onclick="history.back()">
-			<img src="ui/images/arrow-left.svg" />
-		</button>
-
-		<img class="logotype" src="ui/images/logo.svg" alt="Evothings" />
-
-		<!--<button class="menu" onclick=""><img src="ui/images/menu.svg" /></button>-->
-	</header>
-
-	<h1>Arduino101 Relay BLE</h1>
-
-	<p id="info">Initializing...</p>
-
-	<button class="blue wide" onclick="app.connect()">BLE CONNECT</button>
-
-	<br />
-
-	<button class="green wide big" onclick="app.relay(1)">RELAY 1</button>
-
-	<br />
-
-	<button class="red wide big" onclick="app.relay(2)">RELAY 2</button>
-    
-    <br/>
-    
-    Interval:<input type="number" name="Interval:" value="0" id="interval" />
-
-	<script>
-	// Application object.
-	var app = {}
-
-	// Connected device.
-	app.device = null;
-
-	// Turn on LED.
-	app.relay = function(relayNumber)
-	{
-        /**
-         * Convert the interval inputed by the user to an array of bytes for BLE transmission.
-         * This is an important technique for communicating with your devices.
-         * ** Note well there is no error checking on the input ** This should be
-         * changed for proper deployment.
-         */
-        var buffer = new ArrayBuffer(4);
-        var dv = new DataView(buffer);
-        dv.setInt32(0, document.getElementById('interval').value, false);
-        console.log('dv: ' + dv.getInt32(0));
-        /**
-         * The relay characteristic uuid is '917649A1-D98E-11E5-9EEC-0002A5D5C51B'
-         * This should be set as global constant and given a name to ease future
-         * changes.
-         */
-		app.device && app.device.writeDataArray(new Uint8Array([relayNumber,dv.getUint8(0),dv.getUint8(1),dv.getUint8(2),dv.getUint8(3)]), '917649A1-D98E-11E5-9EEC-0002A5D5C51B');
-        // console debugging here, can be commented out for deployment, etc.
-        var interval_value = document.getElementById('interval').value;
-        console.log('interval: ' + interval_value);
-	}
-
-	app.showMessage = function(info)
-	{
-		document.getElementById('info').innerHTML = info
-	};
-
-	// Called when BLE and other native functions are available.
-	app.onDeviceReady = function()
-	{
-		app.showMessage('Touch the connect button to begin.');
-	};
-
-	app.connect = function()
-	{
-		evothings.arduinoble.close();
-		app.showMessage('Connecting...');
-
-		evothings.arduinoble.connect(
-			'relays', // Advertised local name of BLE device, this was specified in the
-                      // arduino sketch, relayClickBLe.ino: blePeripheral.setLocalName("relays");
-                                     
-			function(device)
-			{
-				app.device = device;
-				app.showMessage('Connected! Touch buttons to turn LED on/off.');
-			},
-			function(errorCode)
-			{
-				app.showMessage('Connect error: ' + errorCode + '.');
-			});
-	};
-
-	document.addEventListener(
-		'deviceready',
-		function() { evothings.scriptsLoaded(app.onDeviceReady) },
-		false);
-	</script>
-
-</body>
-
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLE RelayClick Demo</title>
+    <meta name="description" conten="Control Mikroeletronica Ckick Board over BLE with Arduino101"
+  </head>
+  <body>
+    <div id="container">
+      <button type="button" id="bleConnectButton">RELAY CONNECT</button>
+      <button id="relayOneButton">RELAY ONE</button>
+      <button id="relayTwoButton">RELAY TWO</button>
+    </dev>
+    <script src="relayClick.js"></script>
+    <script src="app.js"></script>
+  </body>
 </html>
