@@ -11,13 +11,12 @@ var commands = {
 annyang.addCommands(commands);
 annyang.start();
 
-var bleConnect(){
+var = bleConnect function(){
     relayClick.connect()
     .then(() => console.log('connected'))
     .catch(error => { console.log('connect error!');
     });
-};
-
+}
 
 // maintain these functions to allow button & oice control options
 bleConnectButton.addEventListener('click', function(){
