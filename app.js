@@ -8,6 +8,14 @@ if (annyang){
 };
 
 annyang.addCommands(commands);
+annyang.addCallback('resultMatch',function(userSaid,commandText,phrases){
+  console.log(userSaid);
+  console.log(commandText);
+  console.log(pharases);
+});
+annyang.addCallback('resultNoMatch',function(phrases){
+  console.log(pharses);
+});
 annyang.start();
 
 var bleConnect = function(){
