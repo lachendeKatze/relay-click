@@ -11,10 +11,10 @@ annyang.addCommands(commands);
 annyang.addCallback('resultMatch',function(userSaid,commandText,phrases){
   console.log(userSaid);
   console.log(commandText);
-  console.log(pharases);
+  console.log(phrases);
 });
 annyang.addCallback('resultNoMatch',function(phrases){
-  console.log(pharses);
+  console.log(phrases);
 });
 annyang.start();
 
