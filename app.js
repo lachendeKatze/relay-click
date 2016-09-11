@@ -2,11 +2,26 @@ let bleConnectButton = document.querySelector('#bleConnectButton');
 let relayOneButton = document.querySelector('#relayOneButton');
 let relayTwoButton = document.querySelector('#relayTwoButton');
 
+if (annyang){
+
+var commands = {
+  'connect': bleConnect;
+};
+
+annyang.addCommands(commands);
+annyang.start();
+
+var bleConnect(){
+    relayClick.connect()
+    .then(() => console.log('connected'))
+    .catch(error => { console.log('connect error!');
+    });
+};
+
+
+// maintain these functions to allow button & oice control options
 bleConnectButton.addEventListener('click', function(){
-  relayClick.connect()
-  .then(() => console.log('connected'))
-  .catch(error => { console.log('connect error!');
-  });
+  bleConnect();
 });
 
 relayOneButton.addEventListener('click', function(){
