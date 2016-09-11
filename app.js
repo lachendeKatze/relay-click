@@ -4,8 +4,7 @@ let relayTwoButton = document.querySelector('#relayTwoButton');
 
 if (annyang){
 
-var commands = {
-  'connect': bleConnect
+  var commands = { 'connect': bleConnect };
 };
 
 annyang.addCommands(commands);
