@@ -12,7 +12,7 @@ annyang.addCommands(commands);
 annyang.start();
 
 var bleConnect = function(){
-  console.log('connect');
+  console.log('connect')
   /*  relayClick.connect()
     .then(() => console.log('connected'))
     .catch(error => { console.log('connect error!');
