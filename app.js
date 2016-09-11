@@ -21,7 +21,7 @@ var bleConnect = function(){
 
 // maintain these functions to allow button & oice control options
 bleConnectButton.addEventListener('click', function(){
-  bleConnect();
+  bleConnect()
 });
 
 relayOneButton.addEventListener('click', function(){
