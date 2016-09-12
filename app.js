@@ -3,14 +3,15 @@ let relayOneButton = document.querySelector('#relayOneButton');
 let relayTwoButton = document.querySelector('#relayTwoButton');
 
 if (annyang){
-  
-  
- /*  var bleConnect = function(){ console.log('by voice, connect'); }
-    /*relayClick.connect()
+ 
+ var bleConnect = function(){ 
+    console.log('by voice, connect'); 
+    relayClick.connect()
       .then(() => console.log('connected'))
       .catch(error => { console.log('connect error!');
     });
-  }; */
+  }; 
+  
   var commands = { 'connect': bleConnect };
   
   annyang.addCallback('resultMatch',function(userSaid,commandText,phrases){
@@ -28,7 +29,7 @@ if (annyang){
   annyang.setLanguage('en');
   annyang.start();
 };
-var bleConnect = function(){ console.log('by voice, connect'); }
+
 
 
 // maintain these functions to allow button & oice control options
