@@ -18,7 +18,7 @@ if (annyang){
     });
   };
  */
-  var relay = function(relayID) {
+  var relayOne = function() {
    /* if (relayID == 1){
      relayClick._writeCharacteristic(relayClick.characteristic1UUID, new Uint8Array([1]))
     .then(() => console.log('wrote 1'))
@@ -33,10 +33,10 @@ if (annyang){
    console.log( 'relayID' + relayID);
   };
   var commands = { 
-    'relay 1': relay(1),
-    'relay1': relay(1),
-    'relay 2': relay(2),
-    'relay 2': relay(2)
+    'relay 1': relayOne,
+    'relay1': relayOne,
+    'relay 2': relayTwo,
+    'relay2': relayTwo
   };
   
   annyang.addCallback('resultMatch',function(userSaid,commandText,phrases){
