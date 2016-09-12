@@ -17,8 +17,9 @@ if (annyang){
     console.log('no match');
     console.log(phrases);
   });
+  annyang.debug();
   annyang.addCommands(commands);
-  
+  annyang.setLanguage('en');
   annyang.start();
 };
 
