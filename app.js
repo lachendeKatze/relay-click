@@ -4,18 +4,17 @@ let relayTwoButton = document.querySelector('#relayTwoButton');
 
 if (annyang){
   var commands = { 'connect': bleConnect };
+  annyang.addCommands(commands);
+  annyang.addCallback('resultMatch',function(userSaid,commandText,phrases){
+    console.log(userSaid);
+    console.log(commandText);
+    console.log(phrases);
+  });
+  annyang.addCallback('resultNoMatch',function(phrases){
+    console.log(phrases);
+  });
+  annyang.start();
 };
-
-annyang.addCommands(commands);
-annyang.addCallback('resultMatch',function(userSaid,commandText,phrases){
-  console.log(userSaid);
-  console.log(commandText);
-  console.log(phrases);
-});
-annyang.addCallback('resultNoMatch',function(phrases){
-  console.log(phrases);
-});
-annyang.start();
 
 var bleConnect = function(){
   console.log('by voice, connect');
