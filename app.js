@@ -5,6 +5,13 @@ let relayTwoButton = document.querySelector('#relayTwoButton');
 if (annyang){
   var commands = { 'connect': bleConnect };
   
+  var bleConnect = function(){
+  console.log('by voice, connect');
+  /*  relayClick.connect()
+    .then(() => console.log('connected'))
+   v .catch(error => { console.log('connect error!');
+    });*/
+};
   
   
   annyang.addCallback('resultMatch',function(userSaid,commandText,phrases){
@@ -23,17 +30,11 @@ if (annyang){
   annyang.start();
 };
 
-var bleConnect = function(){
-  console.log('by voice, connect');
-  /*  relayClick.connect()
-    .then(() => console.log('connected'))
-   v .catch(error => { console.log('connect error!');
-    });*/
-};
+
 // maintain these functions to allow button & oice control options
 bleConnectButton.addEventListener('click', function(){
   console.log('by click, connecy');
-  bleConnect()
+  // bleConnect()
 });
 
 relayOneButton.addEventListener('click', function(){
