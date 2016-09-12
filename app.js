@@ -27,9 +27,9 @@ var bleConnect = function(){
   console.log('by voice, connect');
   /*  relayClick.connect()
     .then(() => console.log('connected'))
-    .catch(error => { console.log('connect error!');
+   v .catch(error => { console.log('connect error!');
     });*/
-}
+};
 // maintain these functions to allow button & oice control options
 bleConnectButton.addEventListener('click', function(){
   console.log('by click, connecy');
