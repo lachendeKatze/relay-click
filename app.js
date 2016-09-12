@@ -4,13 +4,17 @@ let relayTwoButton = document.querySelector('#relayTwoButton');
 
 if (annyang){
   var commands = { 'connect': bleConnect };
+  
   annyang.addCommands(commands);
+  
   annyang.addCallback('resultMatch',function(userSaid,commandText,phrases){
     console.log(userSaid);
     console.log(commandText);
     console.log(phrases);
   });
+  
   annyang.addCallback('resultNoMatch',function(phrases){
+    console.log('no match');
     console.log(phrases);
   });
   annyang.start();
