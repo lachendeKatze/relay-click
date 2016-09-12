@@ -3,16 +3,15 @@ let relayOneButton = document.querySelector('#relayOneButton');
 let relayTwoButton = document.querySelector('#relayTwoButton');
 
 if (annyang){
+  
+  
+  var bleConnect = function(){ console.log('by voice, connect'); }
+    /*relayClick.connect()
+      .then(() => console.log('connected'))
+      .catch(error => { console.log('connect error!');
+    });
+  }; */
   var commands = { 'connect': bleConnect };
-  
-  var bleConnect = function(){
-  console.log('by voice, connect');
-  /*  relayClick.connect()
-    .then(() => console.log('connected'))
-   v .catch(error => { console.log('connect error!');
-    });*/
-};
-  
   
   annyang.addCallback('resultMatch',function(userSaid,commandText,phrases){
     console.log(userSaid);
