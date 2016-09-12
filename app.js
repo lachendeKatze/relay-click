@@ -34,8 +34,11 @@ if (annyang){
 
 // maintain these functions to allow button & oice control options
 bleConnectButton.addEventListener('click', function(){
-  console.log('by click, connecy');
-  // bleConnect()
+  console.log('by click, connect');
+  relayClick.connect()
+      .then(() => console.log('connected'))
+      .catch(error => { console.log('connect error!');
+    });
 });
 
 relayOneButton.addEventListener('click', function(){
