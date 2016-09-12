@@ -20,16 +20,17 @@ if (annyang){
  */
   var relay = function(relayID) {
    if (relayID == 1){
-    relayClick._writeCharacteristic(relayClick.characteristic1UUID, new Uint8Array([1]))
+    /* relayClick._writeCharacteristic(relayClick.characteristic1UUID, new Uint8Array([1]))
     .then(() => console.log('wrote 1'))
     .catch(error => {console.log('write 1 error');
-    });
+    }); 
    } else if ( relayID == 2){
      relayClick._writeCharacteristic(relayClick.characteristic2UUID, new Uint8Array([2]))
     .then(() => console.log('wrote 2'))
     .catch(error => {console.log('write 2 error');
     });
-   }
+   } */
+   console.log( 'relayID' + relayID);
   };
   var commands = { 
     'relay 1': relay(1),
