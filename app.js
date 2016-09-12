@@ -3,7 +3,7 @@ let relayOneButton = document.querySelector('#relayOneButton');
 let relayTwoButton = document.querySelector('#relayTwoButton');
 
 if (annyang){
-  var commands = { 'red': bleConnect };
+  var commands = { 'connect': bleConnect };
   
   
   
