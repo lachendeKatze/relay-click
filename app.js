@@ -19,8 +19,8 @@ if (annyang){
   };
  */
   var relay = function(relayID) {
-   if (relayID == 1){
-    /* relayClick._writeCharacteristic(relayClick.characteristic1UUID, new Uint8Array([1]))
+   /* if (relayID == 1){
+     relayClick._writeCharacteristic(relayClick.characteristic1UUID, new Uint8Array([1]))
     .then(() => console.log('wrote 1'))
     .catch(error => {console.log('write 1 error');
     }); 
