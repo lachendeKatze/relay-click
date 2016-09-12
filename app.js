@@ -17,7 +17,14 @@ if (annyang){
     });
   };
  */
-  var relayOne = function(){console.log('relay One'); };
+  var relayOne = function(){
+    console.log('relay One');
+    relayClick._writeCharacteristic(relayClick.characteristic1UUID, new Uint8Array([1]))
+   .then(() => console.log('wrote 1'))
+   .catch(error => {console.log('write error');
+   });
+  };
+  
   var relayTwo = function(){console.log('relay Two'); };
   
   var commands = { 
