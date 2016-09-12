@@ -5,7 +5,7 @@ let relayTwoButton = document.querySelector('#relayTwoButton');
 if (annyang){
   
   
-  var bleConnect = function(){ console.log('by voice, connect'); }
+ /*  var bleConnect = function(){ console.log('by voice, connect'); }
     /*relayClick.connect()
       .then(() => console.log('connected'))
       .catch(error => { console.log('connect error!');
@@ -28,6 +28,7 @@ if (annyang){
   annyang.setLanguage('en');
   annyang.start();
 };
+var bleConnect = function(){ console.log('by voice, connect'); }
 
 
 // maintain these functions to allow button & oice control options
