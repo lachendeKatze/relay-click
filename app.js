@@ -18,7 +18,7 @@ if (annyang){
     });
   };
  */
-  var relayOne = function() { console.log( 'relayOne); };
+  var relayOne = function() { console.log('relayOne'); };
   var relayTwo = function() { console.log('relay Two'); };
   
   var commands = { 
