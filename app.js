@@ -25,7 +25,13 @@ if (annyang){
    });
   };
   
-  var relayTwo = function(){console.log('relay Two'); };
+  var relayTwo = function(){
+   console.log('relay Two'); 
+   relayClick._writeCharacteristic(relayClick.characteristic1UUID, new Uint8Array([2]))
+   .then(() => console.log('wrote 2'))
+   .catch(error => {console.log('write error');
+   });
+  };
   
   var commands = { 
     'relay 1': relayOne,
