@@ -4,7 +4,6 @@ let relayTwoButton = document.querySelector('#relayTwoButton');
 
 if (annyang){
  
- 
  /* unlikely to be able to use voice command to conenct to BLE do to web-bluetooth
   * security requirment of active click to gain acess.
   */
@@ -18,8 +17,8 @@ if (annyang){
     });
   };
  */
-  var relayOne = function() { console.log('relayOne'); };
-  var relayTwo = function() { console.log('relay Two'); };
+  var relayOne = function(){console.log('relay One'); };
+  var relayTwo = function(){console.log('relay Two'); };
   
   var commands = { 
     'relay 1': relayOne,
