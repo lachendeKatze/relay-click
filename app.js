@@ -3,7 +3,6 @@ let relayOneButton = document.querySelector('#relayOneButton');
 let relayTwoButton = document.querySelector('#relayTwoButton');
 
 if (annyang){
-
   var commands = { 'connect': bleConnect };
 };
 
@@ -19,7 +18,7 @@ annyang.addCallback('resultNoMatch',function(phrases){
 annyang.start();
 
 var bleConnect = function(){
-  console.log('connect');
+  console.log('by voice, connect');
   /*  relayClick.connect()
     .then(() => console.log('connected'))
     .catch(error => { console.log('connect error!');
@@ -27,6 +26,7 @@ var bleConnect = function(){
 }
 // maintain these functions to allow button & oice control options
 bleConnectButton.addEventListener('click', function(){
+  console.log('by click, connecy');
   bleConnect()
 });
 
