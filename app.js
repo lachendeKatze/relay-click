@@ -5,7 +5,7 @@ let relayTwoButton = document.querySelector('#relayTwoButton');
 if (annyang){
   var commands = { 'connect': bleConnect };
   
-  annyang.addCommands(commands);
+  
   
   annyang.addCallback('resultMatch',function(userSaid,commandText,phrases){
     console.log(userSaid);
@@ -17,6 +17,8 @@ if (annyang){
     console.log('no match');
     console.log(phrases);
   });
+  annyang.addCommands(commands);
+  
   annyang.start();
 };
 
