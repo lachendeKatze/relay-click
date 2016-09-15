@@ -75,7 +75,7 @@ if (annyang){
     });
 }); */
 
-bleSwitch.addEventListener('click',function()
+bleSwitch.addEventListener('click',function(){
   console.log('new switch click, connect');
   relayClick.connect()
       .then(() => console.log('connected'))
