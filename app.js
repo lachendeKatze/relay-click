@@ -36,8 +36,15 @@ if (annyang){
   var commands = { 
     'relay 1': relayOne,
     'relay1': relayOne,
+    'one': relayOne,
+    '1': relayOne,
+    'lamp': relayOne,
+    'desklamp': relayOne,
+    'desk lamp': relayOne,
     'relay 2': relayTwo,
-    'relay2': relayTwo
+    'relay2': relayTwo,
+    'two': relayTwo,
+    '2': relayTwo
   };
   
   annyang.addCallback('resultMatch',function(userSaid,commandText,phrases){
