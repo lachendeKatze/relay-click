@@ -1,6 +1,7 @@
-let bleConnectButton = document.querySelector('#bleConnectButton');
+/* let bleConnectButton = document.querySelector('#bleConnectButton'); */
 let relayOneButton = document.querySelector('#relayOneButton');
 let relayTwoButton = document.querySelector('#relayTwoButton');
+let bleSwitch = document.querySelector('#bleSwitch');
 
 if (annyang){
  
@@ -66,13 +67,22 @@ if (annyang){
 
 
 // maintain these functions to allow button & voice control options
-bleConnectButton.addEventListener('click', function(){
+/*bleConnectButton.addEventListener('click', function(){
   console.log('by click, connect');
   relayClick.connect()
       .then(() => console.log('connected'))
       .catch(error => { console.log('connect error!');
     });
+}); */
+
+bleSwitch.addEventListener('click',function()
+  console.log('new switch click, connect');
+  relayClick.connect()
+      .then(() => console.log('connected'))
+      .catch(error => { console.log('connect error!');
+    });
 });
+
 
 relayOneButton.addEventListener('click', function(){
   relayClick._writeCharacteristic(relayClick.characteristic1UUID, new Uint8Array([1]))
