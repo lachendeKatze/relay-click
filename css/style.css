@@ -17,10 +17,10 @@ html {
 }
 
 .switch input {
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  top: 100;
+  right: 100;
+  bottom: 100;
+  left: 100;
   opacity: 0;
   z-index: 100;
   position: absolute;
