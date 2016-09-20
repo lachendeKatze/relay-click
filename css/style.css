@@ -120,8 +120,8 @@ html {
   position: relative;
   width: 50%;
   height: 50%;
-  left: 50%;
-  top: 50%;
+  left: 30%;
+  top: 30%;
   z-index: -1;
   margin: -35% 0 0 -35%;
   border-radius: 50%;
