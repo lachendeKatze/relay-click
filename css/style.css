@@ -123,8 +123,8 @@ html {
   left: 30%;
   top: 30%;
   z-index: -1;
-  margin: -55% 0 0 -55%;
-  border-radius: 50%;
+  margin: -35% 0 0 -35%;
+  border-radius: 25%;
   background: #d2cbc3;
   background: -moz-linear-gradient(#cbc7bc, #d2cbc3);
   background: -ms-linear-gradient(#cbc7bc, #d2cbc3);
