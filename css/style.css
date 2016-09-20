@@ -32,6 +32,7 @@ html {
 /* DEMO 4 */
 .switch {
   top: 80px;
+  right: 100px;
   width: 150px;
   height: 150px;
   position: relative;
