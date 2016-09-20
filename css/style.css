@@ -122,7 +122,7 @@ html {
   height: 50%;
   left: 30%;
   top: 30%;
-  z-index: -10;
+  z-index: -1;
   margin: -35% 0 0 -35%;
   border-radius: 50%;
   background: #d2cbc3;
