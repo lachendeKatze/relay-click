@@ -17,10 +17,10 @@ html {
 }
 
 .switch input {
-  top: 100;
-  right: 100;
-  bottom: 100;
-  left: 100;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   opacity: 0;
   z-index: 100;
   position: absolute;
@@ -31,6 +31,7 @@ html {
 
 /* DEMO 4 */
 .switch {
+  top: 80px;
   width: 150px;
   height: 150px;
   position: relative;
