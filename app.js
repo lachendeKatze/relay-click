@@ -84,6 +84,7 @@ bleSwitch.addEventListener('click',function(){
 });
 
 
+/* comment out event listenrs for these buttons as we will rely on voice control at this time
 relayOneButton.addEventListener('click', function(){
   relayClick._writeCharacteristic(relayClick.characteristic1UUID, new Uint8Array([1]))
   .then(() => console.log('wrote 1'))
@@ -97,3 +98,4 @@ relayTwoButton.addEventListener('click', function(){
   .catch(error => {console.log('write error');
   });
 });
+*/
