@@ -31,9 +31,8 @@ html {
 
 /* DEMO 4 */
 .switch {
-  top: 100px;
-  left: 100px;
-  right: 100px;
+  top: 50px;
+  left: 50px;
   width: 150px;
   height: 150px;
   position: relative;
