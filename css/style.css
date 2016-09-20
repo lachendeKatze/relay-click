@@ -122,9 +122,9 @@ html {
   height: 50%;
   left: 30%;
   top: 30%;
-  z-index: -1;
+  z-index: -10;
   margin: -35% 0 0 -35%;
-  border-radius: 25%;
+  border-radius: 50%;
   background: #d2cbc3;
   background: -moz-linear-gradient(#cbc7bc, #d2cbc3);
   background: -ms-linear-gradient(#cbc7bc, #d2cbc3);
