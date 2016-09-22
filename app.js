@@ -1,6 +1,7 @@
 /**
-* User acitivty is required for Web BLuetooth the make the connection
-*/
+ * app.js connects index.html and relayClick.js together 
+ * User activty is required for Web BLuetooth the make the connection
+ */
 let bleSwitch = document.querySelector('#bleSwitch');
 
 /** All activity is conducted in the context of the annyang object.
