@@ -106,7 +106,7 @@ union
 /* establish BLE service & characteristics */
 BLEPeripheral blePeripheral;
 BLEService relayService("917649A0-D98E-11E5-9EEC-0002A5D5C51B");
-BLECharacteristic relayCharacteristic("917649A1-D98E-11E5-9EEC-0002A5D5C51B", BLERead | BLEWrite, 5);
+BLECharacteristic relayCharacteristic("917649A1-D98E-11E5-9EEC-0002A5D5C51B", BLEWrite, 5);
 // BLEUnsignedCharCharacteristic relayCharacteristic("917649A1-D98E-11E5-9EEC-0002A5D5C51B", BLERead | BLEWrite);
 BLEDescriptor relayDescriptor("2902","relay");
 
