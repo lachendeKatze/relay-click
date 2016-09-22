@@ -2,11 +2,15 @@
 /**
  * Example demonstrating the use of the relay click and arduino uno click shield from
  * MikroElektronika.
+ * 
+ * Uplaod this sketch to your arduino/genuino101, complete the circuit and access from the web!
+ * Web Bluetoooth goodness!
+ * 
  * To be added:
- *    2) BLE control.
- *    3) relay object.
- *    4) relay interval function.
- *    5) RTC "alarm clock" function.
+ *    2) BLE control. Done
+ *    3) relay object. Done
+ *    4) relay interval function. Done
+ *    5) RTC "alarm clock" function. Yet to be done . . .
  */
 
 /**
